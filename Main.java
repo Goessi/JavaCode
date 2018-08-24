@@ -3,64 +3,73 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		int signal;
-		int R;
-		int S;
-		String a="haha";
-		String b="haha";
 		Scanner in = new Scanner(System.in);
-		signal = in.nextInt();
-		R = signal/10;
-		S = signal - R*10;
-		switch(R) {
-		case 1:
-			a = "unreadable.";
-			break;
-		case 2:
-			a = "barely readable, occasinal words distinguishable.";
-			break;
-		case 3:
-			a = "readable with considerable difficulty.";
-			break;
-		case 4:
-			a = "readable with practically no difficulty.";
-			break;
-		case 5:
-			a = "perfectly readable.";
-		}
+		int[] power_coe = new int[101];
+		int count = 0;
+		do
+		{
+			int p = in.nextInt();
+			int c = in.nextInt();
+			power_coe[p] = power_coe[p] + c;
+			if(p == 0) {
+				count += 1;
+			}
+		}while(count <2);
 		
-		switch(S) {
-		case 1:
-			b = "Faint signals, barely perceptible, ";
-			break;
-		case 2:
-			b = "Very weak signals, ";
-			break;
-		case 3:
-			b = "Weak signals, ";
-			break;
-		case 4:
-			b = "Fair signals, ";
-			break;
-		case 5:
-			b = "Fairly good signals, ";
-			break;
-		case 6:
-			b = "Good signals, ";
-			break;
-		case 7:
-			b = "Moderately strong signals, ";
-			break;
-		case 8:
-			b = "Strong signals, ";
-			break;
-		case 9:
-			b = "Extremely strong signals, ";
-			break;
+		int cnt = 0;
+		for(int i=100;i>0;i--)
+		{
+			if(power_coe[i] != 0)
+			{
+				if(cnt != 0)
+				{
+					if( i != 1)
+					{
+						if(power_coe[i]>0)
+						{
+							System.out.print("+"+power_coe[i]+"x"+i);
+						}
+						else
+						{
+							System.out.print(power_coe[i]+"x"+i);
+						}
+					}
+					else
+					{
+						if(power_coe[i]>0)
+						{
+							System.out.print("+"+power_coe[i]+"x");
+						}
+						else
+						{
+							System.out.print(power_coe[i]+"x");
+						}
+					}
+				}
+				else
+				{
+					if(i != 1)
+					{
+						System.out.print(power_coe[i]+"x"+i);
+					}
+					else
+					{
+						System.out.print(power_coe[i]+"x");
+					}
+					cnt = cnt + 1;
+				}
+			}
 		}
-		System.out.println(b+a);
-
+		if(power_coe[0] != 0)
+		{
+			if(power_coe[0] > 0)
+			{
+				System.out.print("+"+power_coe[0]);
+			}
+			else
+			{
+				System.out.print(power_coe[0]);
+			}
+		}
 	}
-
 }
