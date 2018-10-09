@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class ArrAveNum {
+
+	public static void main(String[] args) {
+		// input some number, input -1 indicates EOI
+		// calculate the average of those numbers(not includes -1)
+		// print out numbers that more than average
+		Scanner in = new Scanner(System.in);
+		int num = in.nextInt();
+		int[] numbers = int[100];
+		double sum = 0.0;
+		int count = 0;
+		double ave = 0;
+		while (num != -1) {
+			numbers[count] = num;
+			sum += num;
+			num = in.nextInt();
+			count += 1;
+		}
+		ave = sum/count;
+		for(int i=0;i<count;i++) {
+			if (numbers[i]>=ave) {
+				System.out.println(number[i]+" ");
+			}
+		}
+
+	}
+
+}

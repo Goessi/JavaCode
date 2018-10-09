@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class findPrime {
+
+	public static void main(String[] args) {
+		// loop n times
+		Scanner in = new Scanner(System.in);
+		int x = in.nextInt();
+		if (x == 1) {
+			System.out.println("1 is not a Prime");
+		}
+		
+
+	}
+
+}

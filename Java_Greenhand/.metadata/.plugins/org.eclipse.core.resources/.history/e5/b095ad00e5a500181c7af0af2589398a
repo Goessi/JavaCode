@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class voteMachine {
+
+	public static void main(String[] args) {
+		// user input unknown number of numbers between 0-9
+		// using -1 indicates EOI
+		// print how much each number shows
+		
+		Scanner sc = new Scanner(System.in);
+		int x;
+		int[] numbers = new int[10];
+		while(x != -1) {
+			if(x>=0 && x<=9) {
+				numbers[x] += 1;
+			}
+		}
+
+	}
+
+}

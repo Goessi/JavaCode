@@ -1,0 +1,9 @@
+package test;
+
+public class A {
+	static int i = 0;//1
+    float f = 1.0;//2
+    A() {
+        str = ¡°Hello¡±;//3
+    }
+}

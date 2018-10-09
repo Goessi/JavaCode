@@ -1,0 +1,31 @@
+import java.io.IOException;
+import java.io.Serializable;
+
+class Stu implements Serializable {
+	private String name;
+	private int age;
+	private int grade;
+	
+	public Stu(String name, int age, int grade) {
+		this.name = name;
+		this.age = age;
+		this.grade = grade;
+	}
+	
+	public String toSring() {
+		return name+" "+age+" "+grade;
+	}
+	
+}
+public class Student {
+
+	public static void main(String[] args) {
+		try {
+			Stu s1 = new Stu("",);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

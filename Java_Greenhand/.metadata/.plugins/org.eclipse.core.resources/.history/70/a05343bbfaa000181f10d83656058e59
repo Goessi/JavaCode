@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class maxnumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int x;
+		int y;
+		Scanner in = new Scanner(System.in);
+		x = in.nextInt();
+		y = in.nextInt();
+		int max = 0;
+		if (x>y) {
+			max = x;
+		}
+		else
+			max = y;
+		System.out.println("the max number is: " + max);
+
+	}
+
+}

@@ -1,0 +1,10 @@
+import java.awt.*;
+import javax.swing.*;
+public class MyDrawPanel extends JPanel{
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

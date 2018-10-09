@@ -1,0 +1,66 @@
+import java.util.Scanner;
+
+public class findPrime {
+
+	public static void main(String[] args) {
+		// loop n times
+		Scanner in = new Scanner(System.in);
+		int x = in.nextInt();
+		boolean isPrime = true;
+		if (x == 1||x==2) {
+			isPrime = false;
+		}
+		for(int i=2;i<x;i++) {
+			if(x%i == 0) {
+				isPrime = false;
+				break;
+			}
+		}
+		if (isPrime) {
+			System.out.println(x+" is a Prime");
+		}
+		else {
+			System.out.println(x+" is not a Prime");
+		}
+		
+		// loop for n/2
+		if(x == 1||x%2 == 0&&x!=2) {
+			isPrime = false;
+		}
+		else {
+			for(int j=3;j<x;j=j+2) {
+				if(x%j == 0) {
+					isPrime = false;
+					break;
+				}
+			}
+		}
+		if (isPrime) {
+			System.out.println(x+" is a Prime");
+		}
+		else {
+			System.out.println(x+" is not a Prime");
+		}
+		
+		//loop for sqrt(n)
+		if(x == 1||x%2 == 0&&x!=2) {
+			isPrime = false;
+		}
+		else {
+			for(int j=3;j<Math.sqrt(x);j=j+2) {
+				if(x%j == 0) {
+					isPrime = false;
+					break;
+				}
+			}
+		}
+		if (isPrime) {
+			System.out.println(x+" is a Prime");
+		}
+		else {
+			System.out.println(x+" is not a Prime");
+		}
+
+	}
+
+}

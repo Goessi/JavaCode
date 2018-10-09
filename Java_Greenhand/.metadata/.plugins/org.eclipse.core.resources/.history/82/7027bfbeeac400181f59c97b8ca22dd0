@@ -1,0 +1,43 @@
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.FileInputStream;
+
+
+public class fileOutInStream {
+
+	public static void main(String[] args) {
+		System.out.println("hello world");
+		byte[] buf = new byte[10];
+		for ( int i=0;i<buf.length; i++) {
+			buf[i]=(byte)i;
+		}
+		try {
+			PrintWriter out = new PrintWriter(new BufferedWriter(new OutputStreamWriter(new FileOutputStream("gb18030.txt"))));
+			int i = 123456   ;
+			out.println(i);
+//			out.write(buf);
+			out.close();
+			BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream("src/fileOutInStream.java")));
+			String line;
+			while( (line=in.readLine()) != null ) {
+				System.out.println(line);
+			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

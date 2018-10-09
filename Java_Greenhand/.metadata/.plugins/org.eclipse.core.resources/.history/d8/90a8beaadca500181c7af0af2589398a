@@ -1,0 +1,11 @@
+
+public class ArrAveNum {
+
+	public static void main(String[] args) {
+		// input some number, input -1 indicates EOI
+		// calculate the average of those numbers(not includes -1)
+		// print out numbers that more than average
+
+	}
+
+}
