@@ -1,0 +1,18 @@
+
+public class initArray {
+
+	public static void main(String[] args) {
+		// Array is different from other variables
+		// once it is been innitialized, the array is stored in somewhere else
+		int[] a = {1,2,3,4,5};
+		int[] b = {1,2,3,4,5};
+		System.out.println(a==b);
+		
+		int[] c = a;
+		c[0] = 22;
+		System.out.println(a[0]);
+		System.out.println(a==c);
+
+	}
+
+}

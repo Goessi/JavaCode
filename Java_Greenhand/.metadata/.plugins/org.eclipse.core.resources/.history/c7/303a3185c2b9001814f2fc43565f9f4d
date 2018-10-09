@@ -1,0 +1,16 @@
+package test;
+
+public class Test {
+	private int i = f(); 
+    private int j = 10;
+    private int f() {
+        return j;
+    }
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println((new Test()).i);
+
+	}
+
+}

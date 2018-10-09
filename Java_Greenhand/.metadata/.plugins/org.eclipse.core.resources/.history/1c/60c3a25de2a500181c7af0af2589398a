@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class ArrAveNum {
+
+	public static void main(String[] args) {
+		// input some number, input -1 indicates EOI
+		// calculate the average of those numbers(not includes -1)
+		// print out numbers that more than average
+		Scanner in = new Scanner(System.in);
+		int num = in.nextInt();
+		int[] numbers = new int[100];
+		double sum = 0.0;
+		int count = 0;
+		double ave = 0;
+		while (num != -1) {
+			numbers[count] = num;
+			sum += num;
+			num = in.nextInt();
+			count += 1;
+		}
+		ave = sum/count;
+		System.out.println(ave);
+		for(int i=0;i<count;i++) {
+			if (numbers[i]>=ave) {
+				System.out.println(numbers[i]+" ");
+			}
+		}
+		
+		// somehow, it has some disadvantages
+		// like user may input number of numbers more than 100
+		// let user input the number of length
+		System.out.println("Please input a number of length: ");
+		int y = in.nextInt();
+		int[] number = new int[y];
+		sum = 0.0;
+		count = 0;
+		ave = 0;
+		int n = in.nextInt();
+		while(count < y) {
+			number[count] = n;
+			sum += n;
+			count += 1;
+			n = in.nextInt();
+		}
+		ave = sum/count;
+		System.out.print(ave);
+		
+
+	}
+
+}

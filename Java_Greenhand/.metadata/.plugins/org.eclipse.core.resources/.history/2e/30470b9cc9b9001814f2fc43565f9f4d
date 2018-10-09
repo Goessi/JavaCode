@@ -1,0 +1,18 @@
+package test;
+class Letter {
+    char c;
+}
+public class po {
+	static void f(Letter y) {
+        y.c = 'z';
+    }
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Letter x = new Letter();
+        x.c = 'a';
+        f(x);
+        System.out.println(x.c);
+	}
+
+}
