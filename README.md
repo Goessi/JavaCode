@@ -1,0 +1,2 @@
+# JavaCode
+### preconditions for Hadoop
